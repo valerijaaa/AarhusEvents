@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     
     // This code is called when jquery is ready to be used
-    $.getJSON( "https://api.detskeriaarhus.dk/api/events", function( eventsData ) {
+    $.getJSON( "https://api.detskeriaarhus.dk/api/events?items_per_page=35", function( eventsData ) {
         console.log(eventsData);
 
         var source = $("#events-list-template").html(); 

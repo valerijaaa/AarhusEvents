@@ -13,61 +13,28 @@
 <body>
 
 <div class="container"> 
-
-
-    <div class="card1">Card1</div>
-    <div class="card2">Card2</div>
-    <div class="card3">Card3</div>
-    <div class="card4">Card4</div>
-    <div class="card5">Card5</div>
-    <div class="card6">Card6</div>
-    <div class="card7">Card7</div>
-
+    <!-- events will be here -->
 </div>
 
+<script id="events-list-template" type="text/x-handlebars-template">
+        {{#events}} 
+        <div class="card" style="background-image: url({{images.medium}}); background-size: cover;">
+            <h1>
+                {{name}}
+            </h1>
+        </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <div class="container">
-        <h1>Upcomign events in Aarhus:</h1>
-    </div>
-
-    <script id="events-list-template" type="text/x-handlebars-template">
-        <ul>
-            {{#events}} 
-                <li>
-                    <span>{{name}}</span>
-                    <img src="{{images.small}}"/>
-                    
-                    {{#isFree}}
-                        <strong>IT IS FOR FREE</strong>
-                    {{/isFree}}
-                   
-                </li>
-            {{/events}} 
-        </ul>
-    </script> -->
+        <!-- <li>
+            <span>{{name}}</span>
+            <img src="{{images.small}}"/>
+            
+            {{#isFree}}
+                <strong>IT IS FOR FREE</strong>
+            {{/isFree}}
+            
+        </li> -->
+        {{/events}} 
+</script> 
 
   <script src="/node_modules/jquery/dist/jquery.js"></script>
   <script src="/node_modules/handlebars/dist/handlebars.js"></script>
