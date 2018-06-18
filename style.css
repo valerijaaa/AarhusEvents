@@ -2,18 +2,15 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-auto-rows: minmax(300px, auto);
-  column-gap: 1em;
-  row-gap: 1em;
-
+  /* column-gap: 1em;
+  row-gap: 1em; */
 }
-
-
-.container {
+/* .container {
     background-color: rgb(223, 167, 63);
-}
+} */
 .container > div {
-    border: 2px solid #ffa94d;
-    border-radius: 5px;
+    /* border: 2px solid; */
+    /* border-radius: 5px; */
     background-color: #ffd8a8;
     padding: 1em;
     color: #ffffff;
