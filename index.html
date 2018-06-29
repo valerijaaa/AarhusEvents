@@ -5,35 +5,32 @@
   <title>Aarhus EVENTS</title>
   <meta name="description" content="The HTML5 Herald">
   <meta name="author" content="SitePoint">
-
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<div class="container"> 
+<div class="events"> 
     <!-- events will be here -->
 </div>
 
 <script id="events-list-template" type="text/x-handlebars-template">
         {{#events}} 
-        <div class="card" style="background-image: url({{images.medium}}); background-size: cover;">
-            <h1>
-                {{name}}
-            </h1>
+        <div class="events__event">
+            <div class="event__image" style="background-image: url({{images.medium}});"></div>
+            <div class="event__body">
+                <div class="event__information">
+                    <h1 class="event__heading">
+                            {{name}}
+                    </h1>
+                </div>
+            </div>
         </div>
 
-        <!-- <li>
-            <span>{{name}}</span>
-            <img src="{{images.small}}"/>
-            
-            {{#isFree}}
-                <strong>IT IS FOR FREE</strong>
-            {{/isFree}}
-            
-        </li> -->
         {{/events}} 
+       
 </script> 
 
   <script src="/node_modules/jquery/dist/jquery.js"></script>

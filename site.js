@@ -20,7 +20,7 @@ $( document ).ready(function() {
 
         });
 
-        $('.container').append(template(data));
+        $('.events').append(template(data));
       });
     
   });
