@@ -7,31 +7,41 @@
   <meta name="author" content="SitePoint">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css">
 
 </head>
 
 <body>
 
-<div class="events"> 
+<div class="events">
     <!-- events will be here -->
 </div>
 
 <script id="events-list-template" type="text/x-handlebars-template">
-        {{#events}} 
+        {{#events}}
         <div class="events__event">
             <div class="event__image" style="background-image: url({{images.medium}});"></div>
             <div class="event__body">
                 <div class="event__information">
                     <h1 class="event__heading">
-                            {{name}}
+                        {{name}}
                     </h1>
+
+                    <button onclick="favoriteFunction('{{name}}', this)">
+                        {{#isFavorite this.name}}
+                            <i class="fas fa-heart"></i>
+                        {{else}}
+                            <i class="far fa-heart"></i>
+                        {{/isFavorite}}
+                    </button>
                 </div>
+                
             </div>
         </div>
 
-        {{/events}} 
-       
-</script> 
+        {{/events}}
+
+</script>
 
   <script src="/node_modules/jquery/dist/jquery.js"></script>
   <script src="/node_modules/handlebars/dist/handlebars.js"></script>
